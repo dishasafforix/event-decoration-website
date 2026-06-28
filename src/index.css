@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", system-ui, sans-serif;
+ -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.font-display {
+    font-family: "Playfair Display", serif;
+ letter-spacing: -0.01em;
+}
+
+.font-body {
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+/* Selection */
+
+::selection {
+    background: #7c3aed;
+    color: #ffffff;
+}
+
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7c3aed, #ec4899);
+    border-radius: 999px;
+}
+
+
+/* Masonry helpers */
+
+.masonry {
+    column-count: 1;
+    column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.25rem;
+}
+
+
+/* Marquee for sub-hero */
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-track {
+    animation: marquee 40s linear infinite;
+}
+
+
+/* Soft glow */
+
+.glow-purple {
+    box-shadow: 0 20px 60px -20px rgba(124, 58, 237, 0.45), 0 8px 25px -10px rgba(236, 72, 153, 0.25);
+}
+
+.glow-gold {
+    box-shadow: 0 20px 60px -20px rgba(245, 158, 11, 0.45), 0 8px 25px -10px rgba(124, 58, 237, 0.2);
+}
+
+
+/* Decorative blobs */
+
+.blob {
+    filter: blur(80px);
+    opacity: 0.45;
+    border-radius: 9999px;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+/* Page loader */
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@layer base {
+     :root {
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 220 14% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 220 14% 96%;
+        --muted-foreground: 220 9% 46%;
+        --accent: 38 92% 50%;
+        --accent-foreground: 222 47% 11%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 262 83% 58%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
