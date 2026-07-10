@@ -1,0 +1,104 @@
+{
+  "theme": "LIGHT",
+  "archetype": "5 (Luxury)",
+  "design_context": "marketing_site",
+  "colors": {
+    "primary": "#7C3AED",
+    "secondary": "#EC4899",
+    "accent": "#F59E0B",
+    "background_primary": "#FFFFFF",
+    "background_secondary": "#F9FAFB",
+    "text_primary": "#111827",
+    "text_secondary": "#4B5563"
+  },
+  "typography": {
+    "headings": "Playfair Display",
+    "body": "Poppins",
+    "weights": {
+      "headings": [400, 600, 700],
+      "body": [300, 400, 500]
+    },
+    "hierarchy_rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed"
+    }
+  },
+  "layout": {
+    "spacing_system": "Generous Spacing: use p-6, p-8, p-12, p-16, p-24, p-32.",
+    "grid_strategy": "The Tetris Grid (Asymmetric, breathable) - grid-cols-1 md:grid-cols-8 lg:grid-cols-12 for complex layouts. Standard bento grid for services.",
+    "section_rules": "Generous vertical padding between sections (py-24 or py-32). Mobile-first approach."
+  },
+  "components": {
+    "hero": "Full-screen (min-h-screen). Parallax background image. Max overlay opacity bg-black/40 to let luxury image breathe. Animated stats at bottom using Framer Motion.",
+    "navbar": "Sticky, glassmorphism (backdrop-blur-xl bg-white/70), subtle bottom border (border-white/20). Scroll-aware.",
+    "buttons": "Premium feel. Primary CTA uses #7C3AED (Royal Purple) with a soft shadow and scale-up on hover. Accent CTA uses #F59E0B (Golden).",
+    "cards": "Subtle shadows (shadow-lg), slight hover lift (-translate-y-1), and border-white/40. No heavy borders.",
+    "gallery": "Masonry layout with category filter. Images MUST have object-cover and proper aspect ratios. Lightbox on click.",
+    "pricing": "3 cards. Gold/Premium highlighted. Use #F59E0B for highlighted package accents.",
+    "process": "4-step vertical or alternating timeline. Use react-icons for steps.",
+    "contact_form": "Frontend-only. Use clean input fields with bottom border only or subtle background.",
+    "footer": "Dark background (#111827) with light text for contrast shift. Massive space (py-20).",
+    "animations": "Framer Motion. Smooth scroll (Lenis if possible, but keep to Framer Motion for scroll-triggered reveal). Staggered entrances for cards."
+  },
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.pexels.com/photos/37828118/pexels-photo-37828118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Beautiful outdoor wedding ceremony setting"
+      },
+      {
+        "url": "https://images.pexels.com/photos/6191055/pexels-photo-6191055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Elegant floral scene"
+      }
+    ],
+    "services": [
+      {
+        "category": "Wedding",
+        "url": "https://images.pexels.com/photos/28998231/pexels-photo-28998231.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+      {
+        "category": "Birthday",
+        "url": "https://images.pexels.com/photos/31972323/pexels-photo-31972323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+      {
+        "category": "Corporate",
+        "url": "https://images.pexels.com/photos/29708240/pexels-photo-29708240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.pexels.com/photos/30021755/pexels-photo-30021755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Floral"
+      },
+      {
+        "url": "https://images.pexels.com/photos/35042459/pexels-photo-35042459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Stage"
+      },
+      {
+        "url": "https://images.pexels.com/photos/18310611/pexels-photo-18310611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Birthday"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1723832348140-a2d9eb1753b1",
+        "category": "Wedding"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1524777313293-86d2ab467344",
+        "category": "Decoration"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: framer-motion, react-icons, clsx, tailwind-merge.",
+    "Update index.css to import Google Fonts: Playfair Display and Poppins.",
+    "Build the complete responsive layout in React.js using Tailwind CSS.",
+    "Adhere strictly to the color palette provided (Primary: #7C3AED, Secondary: #EC4899, Accent: #F59E0B).",
+    "Use standard HTML tags + Tailwind for marketing layouts, avoiding standard Shadcn layout wrappers for creativity.",
+    "Implement scroll animations with Framer Motion.",
+    "Add 'data-testid' to all interactive elements for testing.",
+    "DO NOT use placeholder images. Rely on the provided 'image_urls' mapping.",
+    "Ensure all components are '.js' or '.jsx'. Do not use '.tsx'."
+  ]
+}
